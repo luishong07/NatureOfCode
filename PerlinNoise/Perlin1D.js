@@ -14,6 +14,7 @@ function setup() {
 
 function draw() {
 	background(0)
+	
 	//single dot moving
 	// let x = map(noise(xOff1), 0, 1, 0, width)
 	// let y = map(noise(xOff2), 0, 1, 0, height)
@@ -22,7 +23,7 @@ function draw() {
 	// ellipse(x, y, 25, 25)
 	
 	//graphing 1D 
-	stroke(255)
+	// stroke(255)
 	noFill()
 	beginShape()
 	let xOff = start
@@ -35,4 +36,6 @@ function draw() {
 	endShape()
 	start += inc
 	// noLoop()
+
+	
 }
