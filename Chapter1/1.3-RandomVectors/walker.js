@@ -1,8 +1,7 @@
 class Walker {
     constructor(x, y){
         this.pos =  createVector(x, y)
-        // this.vel = createVector(1,0)//this works as an updated to the direction and speed of pos
-        this.vel = p5.Vector.random2D()//makes walker go in a different direction every time
+        this.vel = createVector(1,0)//this works as an updated to the direction and speed of pos
     }
 
     update(){
