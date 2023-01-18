@@ -19,6 +19,8 @@ function setup() {
     attractor = new Attractor(innerWidth/2, innerHeight/2, 50)
 }
 
+
+
 function draw(){
 
     background(0)
