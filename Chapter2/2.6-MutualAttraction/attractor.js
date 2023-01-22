@@ -26,8 +26,8 @@ class Attractor{
     }
 
     show(){
-        // stroke(255,45,73)
-        fill(255)
+        noStroke()
+        fill(255,0,100)
         ellipse(this.pos.x, this.pos.y, this.r*2)
     }
 }

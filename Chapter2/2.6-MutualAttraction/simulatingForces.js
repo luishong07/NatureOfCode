@@ -2,6 +2,8 @@ let movers = []
 let m2
 let m3
 let sun
+let s2
+let s3 
 function setup() {
     createCanvas(innerWidth, innerHeight)
 
@@ -17,15 +19,10 @@ function setup() {
         movers[i] = new Mover(pos.x, pos.y, vel.x, vel.y, m)
 
     }
-    sun = new Mover(0,0,0,0, 100)
-    // movers[0] = new Mover(innerWidth/2, innerHeight/2, 50)
-    // movers[1] = new Mover(innerWidth/3, innerHeight/3, 50)
-    // movers[2] = new Mover(2*innerWidth/3, 2*innerHeight/3, 50)
-
-
-    // m2 = new Mover(random(100,300), random(100,300),50)
-    // m3 = new Mover(random(100,300), random(100,300),50)
-    // attractor = new Attractor(innerWidth/2, innerHeight/2, 50)
+    sun = new Attractor(300,300, 100)
+    s2 = new Attractor(-300,-300,100)
+    s3 = new Attractor(-300, 300,100)
+    
 }
 
 
@@ -36,25 +33,20 @@ function draw(){
     translate(innerWidth/2, innerHeight/2)
     for(let mover of movers){
         sun.attract(mover)
+        s2.attract(mover)
+        s3.attract(mover)
         for(let other of movers){
             if(mover !== other){
                 mover.attract(other)
                 stroke(255)
-                // line(mover.pos.x, mover.pos.y, other.pos.x, other.pos.y)
             }
         }
     }
     sun.show()
+    s2.show()
+    s3.show()
 
-    // movers[0].attract(movers[1])
-    // movers[0].attract(movers[2])
-
-    // movers[1].attract(movers[0])
-    // movers[1].attract(movers[2])
-
-    // movers[2].attract(movers[0])
-    // movers[2].attract(movers[1])
-
+  
 
     for(let mover of movers){
         mover.update()
